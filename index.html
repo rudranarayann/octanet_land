@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaya Travels</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2><a href="#"><i class="ion-plane"></i> Safe Travels</a></h2>
+            <nav>
+                <ul>
+                    <li><a href="#" title="Hotels" id="hotels">Hotels</a></li>
+                    <li><a href="#" title="Flights" id="flights">Flights</a></li>
+                    <li><a href="#" title="Tours" id="tours">Tours</a></li>
+                    <li><a class="btn" href="#" title="Register / Log In" id="register">Register/Log In</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="cover">
+            <h1>Discover what's out there.</h1>
+            <form class="flex-form" id="searchForm">
+                <label for="from">
+                    <i class="ion-location"></i>
+                </label>
+                <input type="search" id="searchInput" placeholder="Where do you want to go?">
+                <input type="submit" value="Search">
+            </form>
+            <div id="madeby">
+                <span>
+                    <p>"Travel far enough, you meet yourself." - David Mitchell</p>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const searchValue = document.getElementById('searchInput').value;
+            alert(`Searching for: ${searchValue}`);
+            // Here you can add logic to handle the search
+        });
+
+        document.getElementById('hotels').addEventListener('click', function() {
+            alert('Navigating to Hotels');
+            // Here you can add logic to navigate to the Hotels section/page
+        });
+
+        document.getElementById('flights').addEventListener('click', function() {
+            alert('Navigating to Flights');
+            // Here you can add logic to navigate to the Flights section/page
+        });
+
+        document.getElementById('tours').addEventListener('click', function() {
+            alert('Navigating to Tours');
+            // Here you can add logic to navigate to the Tours section/page
+        });
+
+        document.getElementById('register').addEventListener('click', function() {
+            alert('Navigating to Register/Log In');
+            // Here you can add logic to navigate to the Register/Log In section/page
+        });
+    </script>
+</body>
+</html>
